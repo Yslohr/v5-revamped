@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ardium",
+  "name": "Ardium",
+  "description": "Complete rewrite of the official mod of the Ardium mod from its 5th season",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Yslohr"],
+  "credits": "IMot3k for Founding Ardium, Iska for inspiring the original version of this mod",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,24 @@
+item.ingotArdium.name=Ardium Ingot
+item.ingotOxium.name=Oxium Ingot
+item.oxiumNugget.name=Oxium Nugget
+item.oxiumFragment.name=Oxium Fragment
+item.swordArdium.name=Ardium Sword
+item.shovelArdium.name=Ardium Shovel
+item.pickaxeArdium.name=Ardium Pickaxe
+item.hatchetArdium.name=Ardium Axe
+item.multiToolsArdium.name=Ardium MultiTools
+item.swordOxium.name=Oxium Sword
+item.shovelOxium.name=Oxium Shovel
+item.pickaxeOxium.name=Oxium Pickaxe
+item.hatchetOxium.name=Oxium Axe
+item.multiToolsOxium.name=Oxium MultiTools
+item.helmetArdium.name=Ardium Helmet
+item.chestplateArdium.name=Ardium Chestplate
+item.leggingsArdium.name=Ardium Leggings
+item.bootsArdium.name=Ardium Boots
+item.helmetOxium.name=Oxium Helmet
+item.chestplateOxium.name=Oxium Chestplate
+item.leggingsOxium.name=Oxium Leggings
+item.bootsOxium.name=Oxium Boots
+
+itemGroup.ardiumTab=Ardium
