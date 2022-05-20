@@ -2,6 +2,7 @@ package com.ardium.pvp.common.init;
 
 import com.ardium.pvp.Ardium;
 import com.ardium.pvp.common.items.ItemBeaconable;
+import com.ardium.pvp.common.items.ItemWandExplorer;
 import com.ardium.pvp.common.items.armors.ItemArmorArdium;
 import com.ardium.pvp.common.items.armors.ItemArmorDeath;
 import com.ardium.pvp.common.items.armors.ItemArmorOxium;
@@ -95,6 +96,7 @@ public class ArdiumItems {
         death_leggings = new ItemArmorDeath (DEATH_ARMOR, 2).setUnlocalizedName ("leggingsDeath").setTextureName (Ardium.MOD_ID + ":death_leggings").setCreativeTab (Ardium.TAB_ARDIUM);
         death_boots = new ItemArmorDeath (DEATH_ARMOR, 3).setUnlocalizedName ("bootsDeath").setTextureName (Ardium.MOD_ID + ":death_boots").setCreativeTab (Ardium.TAB_ARDIUM);
 
+        wand_explorer = new ItemWandExplorer().setUnlocalizedName ("wandExplorer").setTextureName (Ardium.MOD_ID + ":wand_explorer").setCreativeTab (Ardium.TAB_ARDIUM);
 
         registerItems ();
     }
@@ -133,5 +135,7 @@ public class ArdiumItems {
         GameRegistry.registerItem (death_chestplate, "death_chestplate");
         GameRegistry.registerItem (death_leggings, "death_leggings");
         GameRegistry.registerItem (death_boots, "death_boots");
+
+        GameRegistry.registerItem (wand_explorer, "wand_explorer");
     }
 }

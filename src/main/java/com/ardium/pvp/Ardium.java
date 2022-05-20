@@ -28,7 +28,7 @@ public class Ardium {
 
     @Mod.EventHandler
     public void preInitialization (final FMLPreInitializationEvent preInitializationEvent) {
-        commonProxy.preInitialization (preInitializationEvent);
+        commonProxy.preInitialization(preInitializationEvent);
     }
 
     @Mod.EventHandler
