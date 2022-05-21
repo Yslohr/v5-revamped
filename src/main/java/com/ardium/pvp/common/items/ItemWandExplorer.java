@@ -1,7 +1,6 @@
 package com.ardium.pvp.common.items;
 
 
-
 import com.ardium.pvp.common.items.utils.Radar;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.client.Minecraft;
@@ -23,8 +22,8 @@ public class ItemWandExplorer extends Item {
             for (int i = 0; i < Minecraft.getMinecraft().theWorld.loadedTileEntityList.size(); ++i) {
                 if (Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i) instanceof TileEntity) {
                     final TileEntity entity = (TileEntity) Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i);
-                    double[] posPlayer = new double[] {Minecraft.getMinecraft().thePlayer.posX,Minecraft.getMinecraft().thePlayer.posY,Minecraft.getMinecraft().thePlayer.posZ};
-                    double[] posEntity = new double[] {entity.xCoord,entity.yCoord,entity.zCoord};
+                    double[] posPlayer = new double[]{Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ};
+                    double[] posEntity = new double[]{entity.xCoord, entity.yCoord, entity.zCoord};
                     double distance = (posPlayer[0] - posEntity[0]) + (posPlayer[1] - posEntity[1]) + (posPlayer[2] - posEntity[2]);
                     if (entity instanceof IInventory && (distance <= 128 || distance >= -128)) {
                         Radar.drawTrappedChestESP(entity.xCoord - Minecraft.getMinecraft().thePlayer.lastTickPosX, entity.yCoord - Minecraft.getMinecraft().thePlayer.lastTickPosY, entity.zCoord - Minecraft.getMinecraft().thePlayer.lastTickPosZ);

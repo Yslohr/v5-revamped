@@ -2,6 +2,7 @@ package com.ardium.pvp.common.init;
 
 import com.ardium.pvp.Ardium;
 import com.ardium.pvp.common.items.ItemBeaconable;
+import com.ardium.pvp.common.items.ItemFoodArdiumApple;
 import com.ardium.pvp.common.items.ItemObsidianBreaker;
 import com.ardium.pvp.common.items.ItemWandExplorer;
 import com.ardium.pvp.common.items.armors.ItemArmorArdium;
@@ -13,10 +14,7 @@ import com.ardium.pvp.common.items.tools.ItemPickaxeBase;
 import com.ardium.pvp.common.items.tools.ItemSwordBase;
 import com.ardium.pvp.common.items.tools.admin.ItemSwordLava;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemSpade;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.common.util.EnumHelper;
 
 /**
@@ -32,6 +30,7 @@ public class ArdiumItems {
     private static final ItemArmor.ArmorMaterial DEATH_ARMOR = EnumHelper.addArmorMaterial ("DEATH", 250, new int[] {50, 50, 50, 50}, 40);
     public static Item ardium_ingot, oxium_ingot, oxium_nugget, oxium_fragment;
     public static Item ardium_helmet, ardium_chestplate, ardium_leggings, ardium_boots;
+    public static Item ardium_apple;
     public static Item oxium_sword, oxium_shovel, oxium_pickaxe, oxium_axe, oxium_multitools;
     public static Item oxium_helmet, oxium_chestplate, oxium_leggings, oxium_boots;
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
@@ -69,6 +68,13 @@ public class ArdiumItems {
         ardium_chestplate = new ItemArmorArdium (ARDIUM_ARMOR, 1).setUnlocalizedName ("chestplateArdium").setTextureName (Ardium.MOD_ID + ":ardium_chestplate").setCreativeTab (Ardium.TAB_ARDIUM);
         ardium_leggings = new ItemArmorArdium (ARDIUM_ARMOR, 2).setUnlocalizedName ("leggingsArdium").setTextureName (Ardium.MOD_ID + ":ardium_leggings").setCreativeTab (Ardium.TAB_ARDIUM);
         ardium_boots = new ItemArmorArdium (ARDIUM_ARMOR, 3).setUnlocalizedName ("bootsArdium").setTextureName (Ardium.MOD_ID + ":ardium_boots").setCreativeTab (Ardium.TAB_ARDIUM);
+
+        /*
+         * Ardium Miscellaneous Items
+         */
+
+        ardium_apple = new ItemFoodArdiumApple(10, 10f, false).setAlwaysEdible().setUnlocalizedName("ardium_apple").setTextureName(Ardium.MOD_ID + ":ardium_apple").setCreativeTab(Ardium.TAB_ARDIUM);
+        //ardium_potion
 
         /*
          *  Oxium Tools
@@ -120,6 +126,10 @@ public class ArdiumItems {
         GameRegistry.registerItem (ardium_chestplate, "ardium_chestplate");
         GameRegistry.registerItem (ardium_leggings, "ardium_leggings");
         GameRegistry.registerItem (ardium_boots, "ardium_boots");
+
+        //Ardium Miscellaneous Items
+        GameRegistry.registerItem(ardium_apple, "ardium_apple");
+
         //Oxium Tools
         GameRegistry.registerItem (oxium_sword, "oxium_sword");
         GameRegistry.registerItem (oxium_shovel, "oxium_shovel");

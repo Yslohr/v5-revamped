@@ -1,5 +1,6 @@
 package com.ardium.pvp.common;
 
+import com.ardium.pvp.common.events.EventHandlerArdium;
 import com.ardium.pvp.common.init.ArdiumBlocks;
 import com.ardium.pvp.common.init.ArdiumFluids;
 import com.ardium.pvp.common.init.ArdiumItems;
@@ -27,6 +28,6 @@ public class CommonProxy {
     }
 
     public void postInitialization (FMLPostInitializationEvent postInitializationEvent) {
-        //MinecraftForge.EVENT_BUS.register (new EventHandlerArdium ());
+        //MinecraftForge.EVENT_BUS.register (new EventHandlerArdium());
     }
 }
