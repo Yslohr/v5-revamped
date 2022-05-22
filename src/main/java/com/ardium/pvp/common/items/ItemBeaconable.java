@@ -28,4 +28,5 @@ public class ItemBeaconable extends Item {
         }
         return ("" + StatCollector.translateToLocal (this.getUnlocalizedNameInefficiently (itemStack) + ".name")).trim ();
     }
+
 }

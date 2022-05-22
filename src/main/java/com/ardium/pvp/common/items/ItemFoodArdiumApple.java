@@ -26,10 +26,10 @@ public class ItemFoodArdiumApple extends ItemFood {
 
     @Override
     protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
-        player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 1200, 4));
-        player.addPotionEffect(new PotionEffect(Potion.heal.id, 1, 10));
-        player.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 2400, 0));
-        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2400, 0));
+        player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 1200, 4));
+        player.addPotionEffect(new PotionEffect(Potion.heal.getId(), 1, 10));
+        player.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 2400, 0));
+        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 2400, 0));
         player.setAbsorptionAmount(5.0f);
     }
 }
