@@ -20,7 +20,7 @@ public class ItemFoodArdiumApple extends ItemFood {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public boolean hasEffect(ItemStack stack, int pass) {
+    public boolean hasEffect(ItemStack stack, int metadata) {
         return stack != null && stack.getItem() != null && stack.getItem() == ArdiumItems.ardium_apple;
     }
 

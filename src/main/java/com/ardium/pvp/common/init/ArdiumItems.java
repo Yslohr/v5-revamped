@@ -27,13 +27,13 @@ public class ArdiumItems {
     private static final ItemArmor.ArmorMaterial DEATH_ARMOR = EnumHelper.addArmorMaterial ("DEATH", 250, new int[] {50, 50, 50, 50}, 40);
     public static Item ardium_ingot, oxium_ingot, oxium_nugget, oxium_fragment;
     public static Item ardium_helmet, ardium_chestplate, ardium_leggings, ardium_boots;
-    public static Item ardium_apple,ardium_potion;
+    public static Item ardium_apple/*,ardium_potion*/;
 
     public static Item oxium_sword, oxium_shovel, oxium_pickaxe, oxium_axe, oxium_multitools;
     public static Item oxium_helmet, oxium_chestplate, oxium_leggings, oxium_boots;
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
     private static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
-    private static Item admin_tool, wand_explorer, obsidian_breaker, fire_sword;
+    private static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword;
 
     public static void initialization () {
 
@@ -71,8 +71,8 @@ public class ArdiumItems {
          * Ardium Miscellaneous Items
          */
 
-        ardium_apple = new ItemFoodArdiumApple(10, 10f, false).setAlwaysEdible().setUnlocalizedName("ardium_apple").setTextureName(Ardium.MOD_ID + ":ardium_apple").setCreativeTab(Ardium.TAB_ARDIUM);
-        ardium_potion = new ItemArdiumPotion(0, 0f, false).setUnlocalizedName("ardium_potion").setTextureName(Ardium.MOD_ID + ":ardium_potion").setCreativeTab(Ardium.TAB_ARDIUM);
+        ardium_apple = new ItemFoodArdiumApple(10, 10f, false).setAlwaysEdible().setUnlocalizedName("appleArdium").setTextureName(Ardium.MOD_ID + ":apple_ardium").setCreativeTab(Ardium.TAB_ARDIUM);
+        //ardium_potion = new ItemArdiumPotion(0, 0f, false).setUnlocalizedName("ardium_potion").setTextureName(Ardium.MOD_ID + ":ardium_potion").setCreativeTab(Ardium.TAB_ARDIUM);
 
 
         /*
@@ -103,7 +103,7 @@ public class ArdiumItems {
         death_boots = new ItemArmorDeath (DEATH_ARMOR, 3).setUnlocalizedName ("bootsDeath").setTextureName (Ardium.MOD_ID + ":death_boots").setCreativeTab (Ardium.TAB_ARDIUM);
 
         wand_explorer = new ItemWandExplorer().setUnlocalizedName ("wandExplorer").setTextureName (Ardium.MOD_ID + ":wand_explorer").setCreativeTab (Ardium.TAB_ARDIUM);
-        obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obdisianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
+        obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
 
         registerItems ();
     }
@@ -128,7 +128,7 @@ public class ArdiumItems {
 
         //Ardium Miscellaneous Items
         GameRegistry.registerItem(ardium_apple, "ardium_apple");
-        GameRegistry.registerItem(ardium_potion, "ardium_potion");
+        //GameRegistry.registerItem(ardium_potion, "ardium_potion");
 
         //Oxium Tools
         GameRegistry.registerItem (oxium_sword, "oxium_sword");

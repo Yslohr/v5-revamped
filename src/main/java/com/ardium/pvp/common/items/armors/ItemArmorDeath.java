@@ -48,7 +48,7 @@ public class ItemArmorDeath extends ItemArmor {
 
     @Override
     public String getArmorTexture (final ItemStack stack, final Entity entity, final int slot, final String type) {
-        return stack.getItem () == ArdiumItems.ardium_leggings ? Ardium.MOD_ID + ":textures/models/armor/death_layer_2.png" : Ardium.MOD_ID + ":textures/models/armor/death_layer_1.png";
+        return stack.getItem () == ArdiumItems.death_leggings ? Ardium.MOD_ID + ":textures/models/armor/death_layer_2.png" : Ardium.MOD_ID + ":textures/models/armor/death_layer_1.png";
     }
 
 }

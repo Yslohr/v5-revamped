@@ -10,6 +10,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 
 public class ItemWandExplorer extends Item {
+
     public ItemWandExplorer() {
 
         this.setMaxStackSize(1);
@@ -32,4 +33,10 @@ public class ItemWandExplorer extends Item {
             }
         }
     }
+
+    @Override
+    public boolean isFull3D() {
+        return true;
+    }
+
 }

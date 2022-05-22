@@ -1,12 +1,19 @@
+tile.oreArdium.name=Ardium Ore
+tile.blockArdium.name=Ardium Block
+tile.ardiumFence.name= Ardium Fence
+tile.ardiumFenceGate.name=Ardium Fence Gate
+tile.stairsArdiumBlock.name=Ardium Stairs
+
 item.ingotArdium.name=Ardium Ingot
 item.ingotOxium.name=Oxium Ingot
 item.oxiumNugget.name=Oxium Nugget
 item.oxiumFragment.name=Oxium Fragment
 item.swordArdium.name=Ardium Sword
 item.shovelArdium.name=Ardium Shovel
-item.pickaxeArdium.name=Ardium Pickaxe
+item.pickaxeArdium.name=Ardium Pickaxe-
 item.hatchetArdium.name=Ardium Axe
 item.multiToolsArdium.name=Ardium MultiTools
+item.appleArdium.name=Ardium Apple
 item.swordOxium.name=Oxium Sword
 item.shovelOxium.name=Oxium Shovel
 item.pickaxeOxium.name=Oxium Pickaxe
@@ -20,5 +27,12 @@ item.helmetOxium.name=Oxium Helmet
 item.chestplateOxium.name=Oxium Chestplate
 item.leggingsOxium.name=Oxium Leggings
 item.bootsOxium.name=Oxium Boots
+item.swordFire.name=Fire Sword
+item.helmetDeath.name=Death Helmet
+item.chestplateDeath.name=Death Chestplate
+item.leggingsDeath.name=Death Leggings
+item.bootsDeath.name=Death Boots
+item.wandExplorer.name=Wand Explorer
+item.obsidianBreaker.name=Obsidian Breaker
 
 itemGroup.ardiumTab=Ardium
