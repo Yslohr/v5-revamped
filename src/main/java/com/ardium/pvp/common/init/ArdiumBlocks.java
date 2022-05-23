@@ -9,6 +9,7 @@ import net.minecraft.block.BlockOre;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.fluids.FluidRegistry;
 
 import static net.minecraft.block.Block.soundTypeMetal;
 import static net.minecraft.block.Block.soundTypePiston;
@@ -24,6 +25,9 @@ public class ArdiumBlocks {
     private static Block ardium_fence_gate, oxium_fence_gate;
     private static Block ardium_stairs, oxium_stairs;
     private static Block ardium_furnace, oxium_furnace;
+    public static Block customBlockFluid;
+
+
 
     public static void initialization () {
         ardium_ore = new BlockOreMeltable ("pickaxe", 2).setHardness (5.0F).setResistance (10.0F).setStepSound (soundTypePiston).setBlockName ("oreArdium").setBlockTextureName (Ardium.MOD_ID + ":ardium_ore");
@@ -32,6 +36,9 @@ public class ArdiumBlocks {
         ardium_fence_gate = new BlockFenceGateBase (ardium_block, "pickaxe", 2).setHardness (10.0F).setResistance (15.0F).setStepSound (soundTypeMetal).setBlockName ("ardiumFenceGate");
         ardium_stairs = new BlockStairsBase (ardium_block, 0, "pickaxe", 2).setBlockName ("stairsArdiumBlock");
         xp_ore = new BlockOreXP ();
+
+        customBlockFluid = new BlockFluidCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
+
         registerBlocks ();
     }
 
@@ -41,5 +48,8 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_fence, ItemBlockArdiumStuff.class, "ardium_fence");
         GameRegistry.registerBlock (ardium_fence_gate, ItemBlockArdiumStuff.class, "ardium_fence_gate");
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
+
+        //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock (customBlockFluid, "customFluid");
     }
 }

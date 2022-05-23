@@ -8,7 +8,10 @@ import com.ardium.pvp.common.items.ItemWandExplorer;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidRegistry;
 
 /**
  * @author - Yslohr on 03/03/2019
@@ -16,18 +19,18 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class CommonProxy {
     public void preInitialization (FMLPreInitializationEvent preInitializationEvent) {
-        //ArdiumFluids.initialization ();
+        ArdiumFluids.initialization ();
         ArdiumBlocks.initialization ();
         ArdiumItems.initialization ();
-        //ArdiumFluids.registerFluid ("fake_water", ArdiumItems.fake_water_bucket);
-
-        MinecraftForge.EVENT_BUS.register(new ItemWandExplorer());
+        ArdiumFluids.registerFluid ("customFluid", ArdiumItems.customFluidBucket);
     }
 
     public void initialization (FMLInitializationEvent initializationEvent) {
     }
 
     public void postInitialization (FMLPostInitializationEvent postInitializationEvent) {
+
         //MinecraftForge.EVENT_BUS.register (new EventHandlerArdium());
+        MinecraftForge.EVENT_BUS.register(new ItemWandExplorer());
     }
 }

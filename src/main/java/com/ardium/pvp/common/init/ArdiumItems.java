@@ -34,6 +34,7 @@ public class ArdiumItems {
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
     private static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
     private static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword;
+    public static Item customFluidBucket;
 
     public static void initialization () {
 
@@ -105,6 +106,8 @@ public class ArdiumItems {
         wand_explorer = new ItemWandExplorer().setUnlocalizedName ("wandExplorer").setTextureName (Ardium.MOD_ID + ":wand_explorer").setCreativeTab (Ardium.TAB_ARDIUM);
         obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
 
+        customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
+
         registerItems ();
     }
 
@@ -150,5 +153,7 @@ public class ArdiumItems {
 
         GameRegistry.registerItem (wand_explorer, "wand_explorer");
         GameRegistry.registerItem (obsidian_breaker, "obsidian_breaker");
+
+        GameRegistry.registerItem (customFluidBucket, "customFluid_bucket");
     }
 }
