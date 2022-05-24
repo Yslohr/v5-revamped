@@ -4,9 +4,7 @@ import com.ardium.pvp.Ardium;
 import com.ardium.pvp.common.blocks.*;
 import com.ardium.pvp.common.items.itemblocks.ItemBlockArdiumStuff;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockOre;
-import net.minecraft.block.BlockStairs;
+import net.minecraft.block.*;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -24,6 +22,7 @@ public class ArdiumBlocks {
     public static Block ardium_fence, oxium_fence;
     public static Block ardium_fence_gate, oxium_fence_gate;
     public static Block ardium_stairs, oxium_stairs;
+    public static Block ardium_slab,double_ardium_slab, oxium_slab;
     public static Block ardium_furnace, oxium_furnace;
 
     public static Block customBlockFluid;
@@ -36,6 +35,9 @@ public class ArdiumBlocks {
         ardium_fence = new BlockFenceBase ("ardium_block", Material.iron, "pickaxe", 2).setBlockTextureName (Ardium.MOD_ID + ":ardium_block").setHardness (5.0F).setResistance (10.0F).setStepSound (soundTypeMetal).setBlockName ("ardiumFence");
         ardium_fence_gate = new BlockFenceGateBase (ardium_block, "pickaxe", 2).setHardness (10.0F).setResistance (15.0F).setStepSound (soundTypeMetal).setBlockName ("ardiumFenceGate");
         ardium_stairs = new BlockStairsBase (ardium_block, 0, "pickaxe", 2).setBlockName ("stairsArdiumBlock");
+        double_ardium_slab = new BlockArdiumSlab (true,Material.rock).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("ardiumSlab");
+        ardium_slab = new BlockArdiumSlab (false,Material.rock).setHardness(2.0F).setResistance(10.0F).setStepSound(soundTypePiston).setBlockName("ardiumSlab");
+
         xp_ore = new BlockOreXP ();
 
         //customBlockFluid = new BlockFluidCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
@@ -49,6 +51,9 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_fence, ItemBlockArdiumStuff.class, "ardium_fence");
         GameRegistry.registerBlock (ardium_fence_gate, ItemBlockArdiumStuff.class, "ardium_fence_gate");
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
+
+        GameRegistry.registerBlock (double_ardium_slab, ItemBlockArdiumStuff.class, "double_ardium_slab");
+        GameRegistry.registerBlock (ardium_slab, ItemBlockArdiumStuff.class, "ardium_slab");
 
         //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
         //GameRegistry.registerBlock (customBlockFluid, "customFluid");
