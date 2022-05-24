@@ -42,7 +42,7 @@ public class CommonProxy {
 
     public void postInitialization (FMLPostInitializationEvent postInitializationEvent) {
 
-        //MinecraftForge.EVENT_BUS.register (new EventHandlerArdium());
+        MinecraftForge.EVENT_BUS.register (new EventHandlerArdium());
         MinecraftForge.EVENT_BUS.register(new ItemWandExplorer());
     }
 
