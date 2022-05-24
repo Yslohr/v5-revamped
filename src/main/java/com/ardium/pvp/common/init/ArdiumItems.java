@@ -5,6 +5,7 @@ import com.ardium.pvp.common.items.*;
 import com.ardium.pvp.common.items.armors.ItemArmorArdium;
 import com.ardium.pvp.common.items.armors.ItemArmorDeath;
 import com.ardium.pvp.common.items.armors.ItemArmorOxium;
+import com.ardium.pvp.common.items.backpack.ItemBackpack;
 import com.ardium.pvp.common.items.tools.ItemAxeBase;
 import com.ardium.pvp.common.items.tools.ItemMultiToolsBase;
 import com.ardium.pvp.common.items.tools.ItemPickaxeBase;
@@ -27,13 +28,14 @@ public class ArdiumItems {
     private static final ItemArmor.ArmorMaterial DEATH_ARMOR = EnumHelper.addArmorMaterial ("DEATH", 250, new int[] {50, 50, 50, 50}, 40);
     public static Item ardium_ingot, oxium_ingot, oxium_nugget, oxium_fragment;
     public static Item ardium_helmet, ardium_chestplate, ardium_leggings, ardium_boots;
-    public static Item ardium_apple/*,ardium_potion*/;
+    public static Item ardium_apple,ardium_potion;
+
 
     public static Item oxium_sword, oxium_shovel, oxium_pickaxe, oxium_axe, oxium_multitools;
     public static Item oxium_helmet, oxium_chestplate, oxium_leggings, oxium_boots;
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
-    private static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
-    private static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword;
+    public static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
+    public static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword,backpack;
     public static Item customFluidBucket;
 
     public static void initialization () {
@@ -73,7 +75,7 @@ public class ArdiumItems {
          */
 
         ardium_apple = new ItemFoodArdiumApple(10, 10f, false).setAlwaysEdible().setUnlocalizedName("appleArdium").setTextureName(Ardium.MOD_ID + ":apple_ardium").setCreativeTab(Ardium.TAB_ARDIUM);
-        //ardium_potion = new ItemArdiumPotion(0, 0f, false).setUnlocalizedName("ardium_potion").setTextureName(Ardium.MOD_ID + ":ardium_potion").setCreativeTab(Ardium.TAB_ARDIUM);
+        ardium_potion = new ItemArdiumPotion(0, 0f, false).setUnlocalizedName("ardium_potion").setTextureName(Ardium.MOD_ID + ":ardium_potion").setCreativeTab(Ardium.TAB_ARDIUM);
 
 
         /*
@@ -105,8 +107,9 @@ public class ArdiumItems {
 
         wand_explorer = new ItemWandExplorer().setUnlocalizedName ("wandExplorer").setTextureName (Ardium.MOD_ID + ":wand_explorer").setCreativeTab (Ardium.TAB_ARDIUM);
         obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
+        backpack = new ItemBackpack().setUnlocalizedName ("backpack").setTextureName (Ardium.MOD_ID + ":backpack").setCreativeTab (Ardium.TAB_ARDIUM);
 
-        customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
+        //customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
 
         registerItems ();
     }
@@ -131,7 +134,7 @@ public class ArdiumItems {
 
         //Ardium Miscellaneous Items
         GameRegistry.registerItem(ardium_apple, "ardium_apple");
-        //GameRegistry.registerItem(ardium_potion, "ardium_potion");
+        GameRegistry.registerItem(ardium_potion, "ardium_potion");
 
         //Oxium Tools
         GameRegistry.registerItem (oxium_sword, "oxium_sword");
@@ -154,6 +157,8 @@ public class ArdiumItems {
         GameRegistry.registerItem (wand_explorer, "wand_explorer");
         GameRegistry.registerItem (obsidian_breaker, "obsidian_breaker");
 
-        GameRegistry.registerItem (customFluidBucket, "customFluid_bucket");
+        GameRegistry.registerItem (backpack, "backpack");
+
+        //GameRegistry.registerItem (customFluidBucket, "customFluid_bucket");
     }
 }

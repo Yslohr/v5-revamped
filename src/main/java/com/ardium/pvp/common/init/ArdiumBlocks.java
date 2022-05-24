@@ -20,11 +20,12 @@ import static net.minecraft.block.Block.soundTypePiston;
 
 public class ArdiumBlocks {
     public static Block ardium_block, compressed_ardium_block,oxium_block;
-    private static Block ardium_ore, oxium_ore, xp_ore;
-    private static Block ardium_fence, oxium_fence;
-    private static Block ardium_fence_gate, oxium_fence_gate;
-    private static Block ardium_stairs, oxium_stairs;
-    private static Block ardium_furnace, oxium_furnace;
+    public static Block ardium_ore, oxium_ore, xp_ore;
+    public static Block ardium_fence, oxium_fence;
+    public static Block ardium_fence_gate, oxium_fence_gate;
+    public static Block ardium_stairs, oxium_stairs;
+    public static Block ardium_furnace, oxium_furnace;
+
     public static Block customBlockFluid;
 
 
@@ -37,7 +38,7 @@ public class ArdiumBlocks {
         ardium_stairs = new BlockStairsBase (ardium_block, 0, "pickaxe", 2).setBlockName ("stairsArdiumBlock");
         xp_ore = new BlockOreXP ();
 
-        customBlockFluid = new BlockFluidCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
+        //customBlockFluid = new BlockFluidCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
 
         registerBlocks ();
     }
@@ -50,6 +51,6 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
 
         //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock (customBlockFluid, "customFluid");
+        //GameRegistry.registerBlock (customBlockFluid, "customFluid");
     }
 }

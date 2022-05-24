@@ -16,9 +16,10 @@ public class ArdiumFluids {
 
 
     public static void initialization () {
+        
         customFluid = new Fluid("customFluid").setDensity(4000).setViscosity(500).setTemperature(286).setLuminosity(10).setUnlocalizedName("customFluid");
-        if (!FluidRegistry.registerFluid (customFluid)) customFluid = FluidRegistry.getFluid ("customFluid");
-        //customFluid = FluidRegistry.getFluid("customFluid");
+        customFluid = FluidRegistry.getFluid("customFluid");
+
     }
 
     public static void registerFluid(String fluidName, Item bucketOfCustomFluid){
