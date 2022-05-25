@@ -14,16 +14,16 @@ public class ArdiumFluids {
 
     public static final String HOT_SPRING_FLUID_NAME = "hot_spring_water";
     public static final String FAKE_WATER_FLUID_NAME = "fake_water";
-    public static Fluid fluidWaterHotSpring,fluidFakeWater;
+
+    public static Fluid fluidFakeWater = new Fluid(HOT_SPRING_FLUID_NAME);
+    public static Fluid fluidWaterHotSpring = new Fluid(FAKE_WATER_FLUID_NAME);
 
 
     public static void initialization() {
-        fluidWaterHotSpring = new Fluid(HOT_SPRING_FLUID_NAME);
         if (!FluidRegistry.registerFluid(fluidWaterHotSpring)) {
             fluidWaterHotSpring = FluidRegistry.getFluid(ArdiumFluids.HOT_SPRING_FLUID_NAME);
         }
 
-        fluidFakeWater = new Fluid(FAKE_WATER_FLUID_NAME);
         if (!FluidRegistry.registerFluid(fluidFakeWater)) {
             fluidFakeWater = FluidRegistry.getFluid(ArdiumFluids.FAKE_WATER_FLUID_NAME);
         }

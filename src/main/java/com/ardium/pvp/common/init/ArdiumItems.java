@@ -113,6 +113,7 @@ public class ArdiumItems {
         backpack = new ItemBackpack().setUnlocalizedName ("backpack").setTextureName (Ardium.MOD_ID + ":backpack").setCreativeTab (Ardium.TAB_ARDIUM);
 
         bucketFakeWater = new ItemBucket(ArdiumBlocks.blockFluidClassicFakeWater).setCreativeTab(Ardium.TAB_ARDIUM).setUnlocalizedName("bucketFakeWater").setTextureName(Ardium.MOD_ID + ":bucket_water_fake");
+        bucketHotSpringWater = new ItemBucket(ArdiumBlocks.blockFluidClassicHotSpring).setCreativeTab(Ardium.TAB_ARDIUM).setUnlocalizedName("bucketHotSpringWater").setTextureName(Ardium.MOD_ID + ":bucket_water_hot_spring");
 
         registerItems ();
     }
