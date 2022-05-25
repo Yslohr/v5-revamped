@@ -1,6 +1,7 @@
 package com.ardium.pvp.common.events;
 
 import com.ardium.pvp.common.blocks.BlockFluidClassicCustom;
+import com.ardium.pvp.common.blocks.BlockFluidClassicFakeWater;
 import com.ardium.pvp.common.init.ArdiumItems;
 import com.ardium.pvp.common.items.tools.admin.ItemSwordLava;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -28,12 +29,20 @@ public class EventHandlerArdium {
     public void onBucketFill(FillBucketEvent event) {
         Block block = event.world.getBlock(event.target.blockX, event.target.blockY, event.target.blockZ);
         int metadata = event.world.getBlockMetadata(event.target.blockX, event.target.blockY, event.target.blockZ);
-        if (block instanceof BlockFluidClassicCustom && metadata == 0) {
+        /*if (block instanceof BlockFluidClassicCustom && metadata == 0) {
             event.world.setBlockToAir(event.target.blockX, event.target.blockY, event.target.blockZ);
             if (!event.world.isRemote) {
                 event.entityPlayer.inventory.consumeInventoryItem(Items.bucket);
                 EntityItem entityItem = new EntityItem(event.world, event.entityPlayer.posX, event.entityPlayer.posY, event.entityPlayer.posZ, new ItemStack(ArdiumItems.customFluidBucket, 1));
                 event.world.spawnEntityInWorld(entityItem);
+            }
+        }*/
+        if (block instanceof BlockFluidClassicFakeWater && metadata == 0) {
+            event.world.setBlockToAir (event.target.blockX, event.target.blockY, event.target.blockZ);
+            if (!event.world.isRemote){
+                event.entityPlayer.inventory.consumeInventoryItem(Items.bucket);
+                EntityItem entityItemBucket = new EntityItem (event.world, event.entityPlayer.posX, event.entityPlayer.posY, event.entityPlayer.posZ, new ItemStack (ArdiumItems.bucketFakeWater, 1));
+                event.world.spawnEntityInWorld(entityItemBucket);
             }
         }
     }

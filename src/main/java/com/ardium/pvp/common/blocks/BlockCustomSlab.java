@@ -30,8 +30,6 @@ public class BlockCustomSlab extends BlockSlab {
         }
         this.setHardness(2.0F);
         this.setResistance(10.0F);
-        this.
-
 
     }
 

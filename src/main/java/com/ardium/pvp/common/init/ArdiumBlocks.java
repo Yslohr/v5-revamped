@@ -28,7 +28,7 @@ public class ArdiumBlocks {
 
     public static Block custom_slab,double_custom_slab;
 
-    public static Block customBlockFluid;
+    public static Block customBlockFluid, blockFluidClassicFakeWater;
 
 
 
@@ -44,7 +44,7 @@ public class ArdiumBlocks {
         double_custom_slab = new BlockCustomSlab (true,Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
 
         test_block = new BlockStone().setHardness(50.0F).setResistance(2000.0F).setStepSound(soundTypePiston).setBlockName("testBlock").setBlockTextureName(Ardium.MOD_ID + ":test_block");
-
+        blockFluidClassicFakeWater = new BlockFluidClassicFakeWater ();
         //customBlockFluid = new BlockFluidClassicCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
 
         registerBlocks ();
@@ -63,8 +63,9 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (custom_slab, ItemBlockCustomSlab.class, "custom_slab");
         GameRegistry.registerBlock (double_custom_slab, ItemBlockCustomSlab.class, "double_custom_slab");
 
+        GameRegistry.registerBlock(blockFluidClassicFakeWater, ArdiumFluids.FAKE_WATER_FLUID_NAME);
 
-       // GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
+        //GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
         //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
         //GameRegistry.registerBlock (customBlockFluid, "customFluid");
     }
