@@ -12,17 +12,16 @@ import net.minecraftforge.client.event.RenderWorldLastEvent;
 public class ItemWandExplorer extends Item {
 
     public ItemWandExplorer() {
-
         this.setMaxStackSize(1);
-        //this.setMaxDamage(10);
+        this.setMaxDamage(10);
     }
 
     @SubscribeEvent
     public void onWorldRender(final RenderWorldLastEvent renderWorldLastEvent) {
-        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getItem() instanceof ItemWandExplorer && Minecraft.getMinecraft().theWorld.isRemote) {
-            for (int i = 0; i < Minecraft.getMinecraft().theWorld.loadedTileEntityList.size(); ++i) {
+        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getItem() instanceof ItemWandExplorer && Minecraft.getMinecraft().theWorld.isRemote && Minecraft.getMinecraft().thePlayer.worldObj != null) {
+            for (int i = 0; i < Minecraft.getMinecraft().thePlayer.worldObj.loadedTileEntityList.size(); ++i) {
                 if (Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i) instanceof TileEntity) {
-                    final TileEntity entity = (TileEntity) Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i);
+                    final TileEntity entity = (TileEntity) Minecraft.getMinecraft().thePlayer.worldObj.loadedTileEntityList.get(i);
                     double[] posPlayer = new double[]{Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ};
                     double[] posEntity = new double[]{entity.xCoord, entity.yCoord, entity.zCoord};
                     double distance = (posPlayer[0] - posEntity[0]) + (posPlayer[1] - posEntity[1]) + (posPlayer[2] - posEntity[2]);
