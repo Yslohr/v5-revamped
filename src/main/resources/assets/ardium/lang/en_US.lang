@@ -40,5 +40,6 @@ item.bootsDeath.name=Death Boots
 item.wandExplorer.name=Wand Explorer
 item.obsidianBreaker.name=Obsidian Breaker
 item.bucketFakeWater.name=Fake Water Bucket
+item.bucketHotSpringWater.name=Hot Spring Water Bucket
 
 itemGroup.ardiumTab=Ardium
