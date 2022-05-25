@@ -38,7 +38,7 @@ public class ArdiumBlocks {
         ardium_stairs = new BlockStairsBase (ardium_block, 0, "pickaxe", 2).setBlockName ("stairsArdiumBlock");
         xp_ore = new BlockOreXP ();
 
-        customBlockFluid = new BlockFluidClassicCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
+        //customBlockFluid = new BlockFluidClassicCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
 
         registerBlocks ();
     }
@@ -51,7 +51,7 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
 
 
-        GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
+       // GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
         //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
         //GameRegistry.registerBlock (customBlockFluid, "customFluid");
     }

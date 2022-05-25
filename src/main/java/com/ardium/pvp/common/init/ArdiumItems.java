@@ -110,7 +110,7 @@ public class ArdiumItems {
         obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
         backpack = new ItemBackpack().setUnlocalizedName ("backpack").setTextureName (Ardium.MOD_ID + ":backpack").setCreativeTab (Ardium.TAB_ARDIUM);
 
-        customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
+        //customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
 
         registerItems ();
     }
@@ -159,6 +159,6 @@ public class ArdiumItems {
         GameRegistry.registerItem (obsidian_breaker, "obsidian_breaker");
         GameRegistry.registerItem (backpack, "backpack");
 
-        GameRegistry.registerItem(customFluidBucket, "custom_fluid_bucket");
+        //GameRegistry.registerItem(customFluidBucket, "custom_fluid_bucket");
     }
 }
