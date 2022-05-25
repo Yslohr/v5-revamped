@@ -62,6 +62,7 @@ public class EventHandlerArdium {
         BlockTNT tnt = (BlockTNT) block;
         event.world.setBlockToAir(event.x, event.y, event.z);
         tnt.func_150114_a(event.world, event.x, event.y, event.z, 1, player);
+        if (!player.capabilities.isCreativeMode) player.getHeldItem().damageItem(3, player);
     }
 
     @SubscribeEvent
@@ -78,7 +79,7 @@ public class EventHandlerArdium {
         player.swingItem();
         if (!creeper.worldObj.isRemote) {
             creeper.func_146079_cb();
-            player.getHeldItem().damageItem(1, player);
+            player.getHeldItem().damageItem(3, player);
         }
     }
 

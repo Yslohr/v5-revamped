@@ -39,6 +39,7 @@ item.leggingsDeath.name=Death Leggings
 item.bootsDeath.name=Death Boots
 item.wandExplorer.name=Wand Explorer
 item.obsidianBreaker.name=Obsidian Breaker
+item.backpack.name=Backpack
 item.bucketFakeWater.name=Fake Water Bucket
 item.bucketHotSpringWater.name=Hot Spring Water Bucket
 

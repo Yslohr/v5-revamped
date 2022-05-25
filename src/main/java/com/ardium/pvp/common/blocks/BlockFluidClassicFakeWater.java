@@ -18,8 +18,6 @@ public class BlockFluidClassicFakeWater extends BlockFluidClassic {
 
     public BlockFluidClassicFakeWater() {
         super(ArdiumFluids.fluidFakeWater, Material.water);
-        setHardness(100F);
-        setLightOpacity(3);
         disableStats();
     }
 
