@@ -12,6 +12,7 @@ import com.ardium.pvp.common.items.tools.ItemPickaxeBase;
 import com.ardium.pvp.common.items.tools.ItemSwordBase;
 import com.ardium.pvp.common.items.tools.admin.ItemSwordLava;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -36,7 +37,7 @@ public class ArdiumItems {
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
     public static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
     public static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword,backpack;
-    public static Item customFluidBucket;
+    public static Item customFluidBucket, bucketFakeWater;
 
     public static void initialization () {
 
@@ -109,7 +110,7 @@ public class ArdiumItems {
         obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
         backpack = new ItemBackpack().setUnlocalizedName ("backpack").setTextureName (Ardium.MOD_ID + ":backpack").setCreativeTab (Ardium.TAB_ARDIUM);
 
-        //customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
+        customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
 
         registerItems ();
     }
@@ -156,9 +157,8 @@ public class ArdiumItems {
 
         GameRegistry.registerItem (wand_explorer, "wand_explorer");
         GameRegistry.registerItem (obsidian_breaker, "obsidian_breaker");
-
         GameRegistry.registerItem (backpack, "backpack");
 
-        //GameRegistry.registerItem (customFluidBucket, "customFluid_bucket");
+        GameRegistry.registerItem(customFluidBucket, "custom_fluid_bucket");
     }
 }

@@ -12,13 +12,16 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class ArdiumFluids {
 
-    public static Fluid customFluid;
+    public static final String CUSTOM_FLUID_NAME = "custom_fluid";
+    public static final String FAKE_WATER_FLUID_NAME = "fake_water";
+    public static Fluid customFluid, fakeWater;
 
 
     public static void initialization () {
         
-        customFluid = new Fluid("customFluid").setDensity(4000).setViscosity(500).setTemperature(286).setLuminosity(10).setUnlocalizedName("customFluid");
-        customFluid = FluidRegistry.getFluid("customFluid");
+        customFluid = new Fluid(CUSTOM_FLUID_NAME).setDensity(4000).setViscosity(500).setTemperature(286).setLuminosity(10).setUnlocalizedName("customFluid");
+        customFluid = FluidRegistry.getFluid(CUSTOM_FLUID_NAME);
+        fakeWater = new Fluid(FAKE_WATER_FLUID_NAME);
 
     }
 

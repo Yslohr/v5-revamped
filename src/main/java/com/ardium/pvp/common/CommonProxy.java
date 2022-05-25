@@ -29,10 +29,10 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class CommonProxy {
     public void preInitialization (FMLPreInitializationEvent preInitializationEvent) {
-        //ArdiumFluids.initialization ();
+        ArdiumFluids.initialization ();
         ArdiumBlocks.initialization ();
         ArdiumItems.initialization ();
-        //ArdiumFluids.registerFluid ("customFluid", ArdiumItems.customFluidBucket);
+        ArdiumFluids.registerFluid ("customFluid", ArdiumItems.customFluidBucket);
     }
 
     public void initialization (FMLInitializationEvent initializationEvent) {

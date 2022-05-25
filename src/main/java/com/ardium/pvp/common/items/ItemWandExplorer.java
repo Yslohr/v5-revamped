@@ -14,12 +14,12 @@ public class ItemWandExplorer extends Item {
     public ItemWandExplorer() {
 
         this.setMaxStackSize(1);
-        this.setMaxDamage(10);
+        //this.setMaxDamage(10);
     }
 
     @SubscribeEvent
-    public void onWorldRender(final RenderWorldLastEvent ev) {
-        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getItem() instanceof ItemWandExplorer && Minecraft.getMinecraft().theWorld.isRemote && Minecraft.getMinecraft().theWorld != null) {
+    public void onWorldRender(final RenderWorldLastEvent renderWorldLastEvent) {
+        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getItem() instanceof ItemWandExplorer && Minecraft.getMinecraft().theWorld.isRemote) {
             for (int i = 0; i < Minecraft.getMinecraft().theWorld.loadedTileEntityList.size(); ++i) {
                 if (Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i) instanceof TileEntity) {
                     final TileEntity entity = (TileEntity) Minecraft.getMinecraft().theWorld.loadedTileEntityList.get(i);

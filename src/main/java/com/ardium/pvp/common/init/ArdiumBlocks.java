@@ -40,7 +40,7 @@ public class ArdiumBlocks {
 
         xp_ore = new BlockOreXP ();
 
-        //customBlockFluid = new BlockFluidCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
+        customBlockFluid = new BlockFluidClassicCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
 
         registerBlocks ();
     }
@@ -55,7 +55,6 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (double_ardium_slab, ItemBlockArdiumStuff.class, "double_ardium_slab");
         GameRegistry.registerBlock (ardium_slab, ItemBlockArdiumStuff.class, "ardium_slab");
 
-        //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
-        //GameRegistry.registerBlock (customBlockFluid, "customFluid");
+        GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
     }
 }
