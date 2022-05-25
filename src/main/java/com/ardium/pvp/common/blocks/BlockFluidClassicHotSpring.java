@@ -12,14 +12,13 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.BlockFluidClassic;
-import net.minecraftforge.fluids.Fluid;
 
-public class BlockFluidClassicCustom extends BlockFluidClassic {
+public class BlockFluidClassicHotSpring extends BlockFluidClassic {
 
     private IIcon stillIcon, flowingIcon;
 
-    public BlockFluidClassicCustom(Fluid fluid, Material material) {
-        super(fluid, material);
+    public BlockFluidClassicHotSpring() {
+        super(ArdiumFluids.fluidWaterHotSpring, Material.water);
         disableStats();
     }
 
@@ -53,8 +52,8 @@ public class BlockFluidClassicCustom extends BlockFluidClassic {
 
     @Override
     public void registerBlockIcons(IIconRegister register) {
-        stillIcon = register.registerIcon(Ardium.MOD_ID + ":" + ArdiumFluids.CUSTOM_FLUID_NAME + "_still");
-        flowingIcon = register.registerIcon(Ardium.MOD_ID + ":" + ArdiumFluids.CUSTOM_FLUID_NAME + "_flow");
+        stillIcon = register.registerIcon(Ardium.MOD_ID + ":" + ArdiumFluids.HOT_SPRING_FLUID_NAME + "_still");
+        flowingIcon = register.registerIcon(Ardium.MOD_ID + ":" + ArdiumFluids.HOT_SPRING_FLUID_NAME + "_flow");
     }
 
     @Override

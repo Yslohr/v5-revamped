@@ -12,21 +12,25 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class ArdiumFluids {
 
-    public static final String CUSTOM_FLUID_NAME = "custom_fluid";
+    public static final String HOT_SPRING_FLUID_NAME = "hot_spring_water";
     public static final String FAKE_WATER_FLUID_NAME = "fake_water";
-    public static Fluid customFluid, fakeWater;
+
+    public static Fluid fluidFakeWater = new Fluid(HOT_SPRING_FLUID_NAME);
+    public static Fluid fluidWaterHotSpring = new Fluid(FAKE_WATER_FLUID_NAME);
 
 
-    public static void initialization () {
-        
-        customFluid = new Fluid(CUSTOM_FLUID_NAME).setDensity(4000).setViscosity(500).setTemperature(286).setLuminosity(10).setUnlocalizedName("customFluid");
-        customFluid = FluidRegistry.getFluid(CUSTOM_FLUID_NAME);
-        fakeWater = new Fluid(FAKE_WATER_FLUID_NAME);
+    public static void initialization() {
+        if (!FluidRegistry.registerFluid(fluidWaterHotSpring)) {
+            fluidWaterHotSpring = FluidRegistry.getFluid(ArdiumFluids.HOT_SPRING_FLUID_NAME);
+        }
+
+        if (!FluidRegistry.registerFluid(fluidFakeWater)) {
+            fluidFakeWater = FluidRegistry.getFluid(ArdiumFluids.FAKE_WATER_FLUID_NAME);
+        }
 
     }
 
-    public static void registerFluid(String fluidName, Item bucketOfCustomFluid){
-        FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack(fluidName, FluidContainerRegistry.BUCKET_VOLUME), new ItemStack (bucketOfCustomFluid), FluidContainerRegistry.EMPTY_BUCKET);
-
+    public static void registerFluid(String fluidName, Item bucketOfCustomFluid) {
+        FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack(fluidName, FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketOfCustomFluid), FluidContainerRegistry.EMPTY_BUCKET);
     }
 }

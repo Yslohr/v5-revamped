@@ -38,7 +38,7 @@ public class ArdiumItems {
     public static Item death_helmet, death_chestplate, death_leggings, death_boots;
     public static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
     public static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword,backpack;
-    public static Item customFluidBucket, bucketFakeWater;
+    public static Item bucketFakeWater, bucketHotSpringWater;
     public static Item item_custom_slab, item_double_custom_slab;
 
     public static void initialization () {
@@ -112,7 +112,8 @@ public class ArdiumItems {
         obsidian_breaker = new ItemObsidianBreaker().setUnlocalizedName ("obsidianBreaker").setTextureName (Ardium.MOD_ID + ":obsidian_breaker").setCreativeTab (Ardium.TAB_ARDIUM);
         backpack = new ItemBackpack().setUnlocalizedName ("backpack").setTextureName (Ardium.MOD_ID + ":backpack").setCreativeTab (Ardium.TAB_ARDIUM);
 
-        //customFluidBucket = new ItemCustomFluidBucket(ArdiumBlocks.customBlockFluid).setUnlocalizedName ("customFluid_bucket").setTextureName (Ardium.MOD_ID + ":customFluid_bucket").setCreativeTab (Ardium.TAB_ARDIUM);
+        bucketFakeWater = new ItemBucket(ArdiumBlocks.blockFluidClassicFakeWater).setCreativeTab(Ardium.TAB_ARDIUM).setUnlocalizedName("bucketFakeWater").setTextureName(Ardium.MOD_ID + ":bucket_water_fake");
+        bucketHotSpringWater = new ItemBucket(ArdiumBlocks.blockFluidClassicHotSpring).setCreativeTab(Ardium.TAB_ARDIUM).setUnlocalizedName("bucketHotSpringWater").setTextureName(Ardium.MOD_ID + ":bucket_water_hot_spring");
 
         registerItems ();
     }
@@ -161,6 +162,7 @@ public class ArdiumItems {
         GameRegistry.registerItem (obsidian_breaker, "obsidian_breaker");
         GameRegistry.registerItem (backpack, "backpack");
 
-        //GameRegistry.registerItem(customFluidBucket, "custom_fluid_bucket");
+        GameRegistry.registerItem(bucketFakeWater, "fake_water_bucket");
+        GameRegistry.registerItem(bucketHotSpringWater, "hot_spring_water_bucket");
     }
 }
