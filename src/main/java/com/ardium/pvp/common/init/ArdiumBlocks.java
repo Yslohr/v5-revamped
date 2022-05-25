@@ -2,13 +2,13 @@ package com.ardium.pvp.common.init;
 
 import com.ardium.pvp.Ardium;
 import com.ardium.pvp.common.blocks.*;
+import com.ardium.pvp.common.items.ItemBlockCustomSlab;
 import com.ardium.pvp.common.items.itemblocks.ItemBlockArdiumStuff;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockOre;
-import net.minecraft.block.BlockStairs;
+import net.minecraft.block.*;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemSlab;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import static net.minecraft.block.Block.soundTypeMetal;
@@ -19,12 +19,14 @@ import static net.minecraft.block.Block.soundTypePiston;
  */
 
 public class ArdiumBlocks {
-    public static Block ardium_block, compressed_ardium_block,oxium_block;
+    public static Block ardium_block, compressed_ardium_block,oxium_block,test_block;
     public static Block ardium_ore, oxium_ore, xp_ore;
     public static Block ardium_fence, oxium_fence;
     public static Block ardium_fence_gate, oxium_fence_gate;
     public static Block ardium_stairs, oxium_stairs;
     public static Block ardium_furnace, oxium_furnace;
+
+    public static Block custom_slab,double_custom_slab;
 
     public static Block customBlockFluid;
 
@@ -38,6 +40,11 @@ public class ArdiumBlocks {
         ardium_stairs = new BlockStairsBase (ardium_block, 0, "pickaxe", 2).setBlockName ("stairsArdiumBlock");
         xp_ore = new BlockOreXP ();
 
+        custom_slab = new BlockCustomSlab (false,Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
+        double_custom_slab = new BlockCustomSlab (true,Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
+
+        test_block = new BlockStone().setHardness(50.0F).setResistance(2000.0F).setStepSound(soundTypePiston).setBlockName("testBlock").setBlockTextureName(Ardium.MOD_ID + ":test_block");
+
         //customBlockFluid = new BlockFluidClassicCustom(ArdiumFluids.customFluid, Material.water).setBlockTextureName(Ardium.MOD_ID + ":customFluid");
 
         registerBlocks ();
@@ -49,6 +56,12 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_fence, ItemBlockArdiumStuff.class, "ardium_fence");
         GameRegistry.registerBlock (ardium_fence_gate, ItemBlockArdiumStuff.class, "ardium_fence_gate");
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
+
+        GameRegistry.registerBlock (test_block, "testBlock");
+
+
+        GameRegistry.registerBlock (custom_slab, ItemBlockCustomSlab.class, "custom_slab");
+        GameRegistry.registerBlock (double_custom_slab, ItemBlockCustomSlab.class, "double_custom_slab");
 
 
        // GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);

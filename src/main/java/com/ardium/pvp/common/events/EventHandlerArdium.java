@@ -42,7 +42,10 @@ public class EventHandlerArdium {
     public void onPlayerInterract(PlayerInteractEvent e) {
         EntityPlayer player = e.entityPlayer;
         Block b = e.world.getBlock(e.x, e.y, e.z);
+        System.out.println("getBlockMetadata : " + e.world.getBlockMetadata(e.x, e.y, e.z));
+        System.out.println("getDamageValue : " + b.getDamageValue(e.world,e.x, e.y, e.z));
 
+        /*
         if (!(b instanceof BlockTNT) || player.getHeldItem() == null || !(player.getHeldItem().getItem() instanceof ItemSwordLava) || e.action != PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) {
             return;
         }
@@ -50,6 +53,8 @@ public class EventHandlerArdium {
         BlockTNT tnt = (BlockTNT) b;
         e.world.setBlockToAir(e.x, e.y, e.z);
         tnt.func_150114_a(e.world, e.x, e.y, e.z, 1, player);
+
+         */
     }
 
     @SubscribeEvent

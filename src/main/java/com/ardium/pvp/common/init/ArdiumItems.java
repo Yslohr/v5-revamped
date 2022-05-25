@@ -13,6 +13,7 @@ import com.ardium.pvp.common.items.tools.ItemSwordBase;
 import com.ardium.pvp.common.items.tools.admin.ItemSwordLava;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.item.*;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -38,6 +39,7 @@ public class ArdiumItems {
     public static Item ardium_sword, ardium_shovel, ardium_pickaxe, ardium_axe, ardium_multitools;
     public static Item /*admin_tool,*/ wand_explorer, obsidian_breaker, fire_sword,backpack;
     public static Item customFluidBucket, bucketFakeWater;
+    public static Item item_custom_slab, item_double_custom_slab;
 
     public static void initialization () {
 
