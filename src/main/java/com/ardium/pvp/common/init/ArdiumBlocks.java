@@ -50,14 +50,9 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (ardium_fence_gate, ItemBlockArdiumStuff.class, "ardium_fence_gate");
         GameRegistry.registerBlock (ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
 
-<<<<<<< HEAD
-        GameRegistry.registerBlock (double_ardium_slab, ItemBlockArdiumStuff.class, "double_ardium_slab");
-        GameRegistry.registerBlock (ardium_slab, ItemBlockArdiumStuff.class, "ardium_slab");
 
         GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
-=======
         //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
         //GameRegistry.registerBlock (customBlockFluid, "customFluid");
->>>>>>> parent of 7f293cc (Slab)
     }
 }
