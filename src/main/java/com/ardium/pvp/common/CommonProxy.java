@@ -11,33 +11,27 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidRegistry;
 
 /**
  * @author - Yslohr on 03/03/2019
  */
 
 public class CommonProxy {
-    public void preInitialization (FMLPreInitializationEvent preInitializationEvent) {
-        ArdiumFluids.initialization ();
-        ArdiumBlocks.initialization ();
-        ArdiumItems.initialization ();
-        FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack(ArdiumFluids.FAKE_WATER_FLUID_NAME, FluidContainerRegistry.BUCKET_VOLUME), new ItemStack (ArdiumItems.bucketFakeWater), FluidContainerRegistry.EMPTY_BUCKET);
+    public void preInitialization(FMLPreInitializationEvent preInitializationEvent) {
+        ArdiumFluids.initialization();
+        ArdiumBlocks.initialization();
+        ArdiumItems.initialization();
+        ArdiumFluids.registerFluid(ArdiumFluids.FAKE_WATER_FLUID_NAME, ArdiumItems.bucketFakeWater);
+        ArdiumFluids.registerFluid(ArdiumFluids.HOT_SPRING_FLUID_NAME, ArdiumItems.bucketHotSpringWater);
     }
 
-    public void initialization (FMLInitializationEvent initializationEvent) {
-
+    public void initialization(FMLInitializationEvent initializationEvent) {
         NetworkRegistry.INSTANCE.registerGuiHandler(Ardium.instance, new ArdiumGuiHandler());
     }
 
-    public void postInitialization (FMLPostInitializationEvent postInitializationEvent) {
-
-        MinecraftForge.EVENT_BUS.register (new EventHandlerArdium());
+    public void postInitialization(FMLPostInitializationEvent postInitializationEvent) {
+        MinecraftForge.EVENT_BUS.register(new EventHandlerArdium());
         MinecraftForge.EVENT_BUS.register(new ItemWandExplorer());
     }
-
-
 }

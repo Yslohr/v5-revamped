@@ -28,7 +28,7 @@ public class ArdiumBlocks {
 
     public static Block custom_slab,double_custom_slab;
 
-    public static Block customBlockFluid, blockFluidClassicFakeWater;
+    public static Block blockFluidClassicFakeWater, blockFluidClassicHotSpring;
 
 
 
@@ -64,9 +64,6 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock (double_custom_slab, ItemBlockCustomSlab.class, "double_custom_slab");
 
         GameRegistry.registerBlock(blockFluidClassicFakeWater, ArdiumFluids.FAKE_WATER_FLUID_NAME);
-
-        //GameRegistry.registerBlock (customBlockFluid, ArdiumFluids.CUSTOM_FLUID_NAME);
-        //GameRegistry.registerBlock(customBlockFluid, customBlockFluid.getUnlocalizedName().substring(5));
-        //GameRegistry.registerBlock (customBlockFluid, "customFluid");
+        GameRegistry.registerBlock(blockFluidClassicHotSpring, ArdiumFluids.HOT_SPRING_FLUID_NAME);
     }
 }
