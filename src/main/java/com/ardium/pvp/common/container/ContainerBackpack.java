@@ -1,5 +1,8 @@
-package com.ardium.pvp.common.items.backpack;
+package com.ardium.pvp.common.container;
 
+import com.ardium.pvp.common.items.backpack.InventoryBackpack;
+import com.ardium.pvp.common.items.backpack.ItemBackpack;
+import com.ardium.pvp.common.items.backpack.SlotBackpack;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

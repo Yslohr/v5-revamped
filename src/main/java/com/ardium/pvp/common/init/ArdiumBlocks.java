@@ -6,9 +6,11 @@ import com.ardium.pvp.common.items.ItemBlockCustomSlab;
 import com.ardium.pvp.common.items.itemblocks.ItemBlockArdiumStuff;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.BlockStone;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 import static net.minecraft.block.Block.soundTypeMetal;
 import static net.minecraft.block.Block.soundTypePiston;
@@ -23,7 +25,7 @@ public class ArdiumBlocks {
     public static Block ardium_fence, oxium_fence;
     public static Block ardium_fence_gate, oxium_fence_gate;
     public static Block ardium_stairs, oxium_stairs;
-    public static Block ardium_furnace, oxium_furnace;
+    public static Block ardium_furnace,ardium_lit_furnace, oxium_furnace;
 
     public static Block custom_slab, double_custom_slab;
 
@@ -38,10 +40,13 @@ public class ArdiumBlocks {
         ardium_stairs = new BlockStairsBase(ardium_block, 0, "pickaxe", 2).setBlockName("stairsArdiumBlock");
         xp_ore = new BlockOreXP();
 
-        custom_slab = new BlockCustomSlab(false, Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
-        double_custom_slab = new BlockCustomSlab(true, Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
+        ardium_furnace = new BlockCustomFurnace(false).setHardness(3.5F).setStepSound(soundTypePiston).setBlockName("customFurnace").setCreativeTab(Ardium.TAB_ARDIUM);
+        ardium_lit_furnace = new BlockCustomFurnace(true).setHardness(3.5F).setStepSound(soundTypePiston).setBlockName("customFurnace").setLightLevel(0.875F);
 
-        test_block = new BlockStone().setHardness(50.0F).setResistance(2000.0F).setStepSound(soundTypePiston).setBlockName("testBlock").setBlockTextureName(Ardium.MOD_ID + ":test_block");
+        custom_slab = new BlockCustomSlab(false, Material.rock).setStepSound(soundTypePiston).setBlockName("customSlab");
+        double_custom_slab = new BlockCustomSlab(true, Material.rock).setStepSound(soundTypePiston).setLightLevel(0.875F).setBlockName("customSlab");
+
+        //test_block = new BlockStone().setHardness(50.0F).setResistance(2000.0F).setStepSound(soundTypePiston).setBlockName("testBlock").setBlockTextureName(Ardium.MOD_ID + ":test_block");
         blockFluidClassicFakeWater = new BlockFluidClassicFakeWater().setHardness(100F).setLightOpacity(3);
         blockFluidClassicHotSpring = new BlockFluidClassicHotSpring().setHardness(100F).setLightOpacity(3);
 
@@ -55,7 +60,10 @@ public class ArdiumBlocks {
         GameRegistry.registerBlock(ardium_fence_gate, ItemBlockArdiumStuff.class, "ardium_fence_gate");
         GameRegistry.registerBlock(ardium_stairs, ItemBlockArdiumStuff.class, "ardium_stairs");
 
-        GameRegistry.registerBlock(test_block, "testBlock");
+        GameRegistry.registerBlock(ardium_furnace, "ardium_furnace");
+        GameRegistry.registerBlock(ardium_lit_furnace, "ardium_lit_furnace");
+
+//        GameRegistry.registerBlock(test_block, "testBlock");
 
 
         GameRegistry.registerBlock(custom_slab, ItemBlockCustomSlab.class, "custom_slab");
